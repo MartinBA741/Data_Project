@@ -1,6 +1,5 @@
 #%% [markdown]
 # # Data Analysis Project
-# TEST5.1
 
 #%%
 import pandas as pd
@@ -10,7 +9,7 @@ import matplotlib.pyplot as plt
 # from matplotlib_venn import venn2
 import pydst # Danmarks Statistik
 from datetime import datetime
-# TEST6
+
 
 #%%
 Dst = pydst.Dst(lang='en') # Set language to English
@@ -34,17 +33,6 @@ Var[:]
 
 #%%
 Var['values'][3][:10]
-
-
-#%%
-
-
-
-#%%
-
-
-#%% [markdown]
-# 
 
 #%%
 df= Dst.get_data(table_id = 'BB1S', variables={'TID':['*'], 'SÆSON':['2'], 'LAND':['W1'], 'POST':['*'], 'INDUDBOP':['N']})
