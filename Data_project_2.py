@@ -93,19 +93,13 @@ df.groupby('POST').describe()
 
 
 #%%
-# plt.style.use('seaborn')
+plt.style.use('seaborn')
 from matplotlib.gridspec import GridSpec
 
 fig, axs = plt.subplots(3,2,figsize=(15,15))
 
 plt.subplots_adjust(left=None, bottom=None, right=None, top=None, wspace=0.2, hspace=0.4)
 
-
-# gs1 = GridSpec(3, 2)
-# ax1 = plt.subplot(gs1[0, 0])
-# ax2 = plt.subplot(gs1[0, 1])
-# ax3 = plt.subplot(gs1[1, 0])
-# 
 
 plt.subplot(3, 2, 1)
 plt.plot(PI['TID'],PI['INDHOLD'])
@@ -133,8 +127,8 @@ plt.title('Goods (FOB)')
 
 
 
-ax = fig.add_subplot(gs[2, :])
 gs = gridspec.GridSpec(3, 2)
+ax = fig.add_subplot(gs[2, :])
 
 #plt.subplot(3, 2, 5)
 ax.plot(CA['TID'],CA['INDHOLD'])
